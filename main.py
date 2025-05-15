@@ -1,5 +1,6 @@
 from api_call import fetch_data
 import pandas as pd
+import os
 
 flights_info= fetch_data()
 flight_status= []
@@ -15,5 +16,5 @@ if 'data' in flights_info:
         departure.append(f['departure']['airport'])
         arrival.append(f['arrival']['airport'])
     flights_df= pd.DataFrame(data= {'flight_date': flight_date, 'flight_status': flight_status, 'departure': departure, 'arrival': arrival}) 
-    print(flights_df)
+
 

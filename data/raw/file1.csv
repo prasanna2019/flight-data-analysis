@@ -1,0 +1,101 @@
+flight_date,flight_status,departure,arrival
+2025-05-06,scheduled,Indira Gandhi International,Melbourne - Tullamarine Airport
+2025-05-06,scheduled,Townsville International,Palm Island
+2025-05-06,scheduled,Ninoy Aquino International,Iloilo International
+2025-05-06,scheduled,Hangzhou,Nanjing Lukou International Airport
+2025-05-06,scheduled,Kansai International,Yantai
+2025-05-06,scheduled,Perth International,Singapore Changi
+2025-05-06,scheduled,Seoul (Incheon),Shanghai Pudong International
+2025-05-06,scheduled,Auckland International,Maroochydore
+2025-05-06,scheduled,Auckland International,Melbourne - Tullamarine Airport
+2025-05-06,scheduled,Hong Kong International,Gimhae
+2025-05-06,scheduled,Ngurah Rai International,Seoul (Incheon)
+2025-05-06,scheduled,Shanghai Pudong International,Suvarnabhumi International
+2025-05-06,scheduled,Shanghai Pudong International,Melbourne - Tullamarine Airport
+2025-05-06,scheduled,Shanghai Pudong International,Charles De Gaulle
+2025-05-06,scheduled,Shanghai Pudong International,Auckland International
+2025-05-06,scheduled,Shanghai Pudong International,Bole International
+2025-05-06,scheduled,Shanghai Pudong International,Findel
+2025-05-06,scheduled,Shanghai Pudong International,Seoul (Incheon)
+2025-05-06,scheduled,Shanghai Pudong International,Singapore Changi
+2025-05-06,scheduled,Shanghai Pudong International,Doha International
+2025-05-06,scheduled,Shanghai Pudong International,El Prat De Llobregat
+2025-05-06,scheduled,Shanghai Pudong International,Liege Airport
+2025-05-06,scheduled,Shanghai Pudong International,Haneda Airport
+2025-05-06,scheduled,Shanghai Pudong International,Ted Stevens Anchorage International Airport
+2025-05-06,scheduled,Shanghai Pudong International,Tianjin Binhai International
+2025-05-06,scheduled,Shanghai Pudong International,Gatwick
+2025-05-06,scheduled,Shanghai Pudong International,Barajas
+2025-05-06,scheduled,Shanghai Pudong International,Liszt Ferenc International
+2025-05-06,scheduled,Soekarno-Hatta International,Mohammad Bin Abdulaziz
+2025-05-06,scheduled,Ninoy Aquino International,Seoul (Incheon)
+2025-05-06,scheduled,Ngurah Rai International,Guangzhou Baiyun International
+2025-05-06,scheduled,Ngurah Rai International,Narita International Airport
+2025-05-06,scheduled,Yantai,Seoul (Incheon)
+2025-05-06,scheduled,Sultan Abdul Aziz Shah,Hong Kong International
+2025-05-06,scheduled,Suvarnabhumi International,Seoul (Incheon)
+2025-05-06,scheduled,Kansai International,Suvarnabhumi International
+2025-05-06,scheduled,Kansai International,Suvarnabhumi International
+2025-05-06,scheduled,Da Nang,Seoul (Incheon)
+2025-05-06,scheduled,Da Nang,Seoul (Incheon)
+2025-05-06,scheduled,Fuzhou,Shenzhen
+2025-05-06,scheduled,Fuzhou,Hangzhou
+2025-05-06,scheduled,Dunedin International,Christchurch International
+2025-05-06,scheduled,Dunedin International,Christchurch International
+2025-05-06,scheduled,Ninoy Aquino International,Narita International Airport
+2025-05-06,scheduled,Ninoy Aquino International,Wenzhou
+2025-05-06,scheduled,Ninoy Aquino International,Puerto Princesa
+2025-05-06,scheduled,Sydney Kingsford Smith Airport,Gold Coast (coolangatta)
+2025-05-06,scheduled,Sydney Kingsford Smith Airport,Gold Coast (coolangatta)
+2025-05-06,scheduled,Sydney Kingsford Smith Airport,Dubai
+2025-05-06,scheduled,Hong Kong International,Kansai International
+2025-05-06,scheduled,Hong Kong International,Kansai International
+2025-05-06,scheduled,Hong Kong International,Taiwan Taoyuan International (Chiang Kai Shek International)
+2025-05-06,scheduled,Hong Kong International,Gimhae
+2025-05-06,scheduled,Beijing Daxing International Airport,Bandar Seri Begwan International Airport
+2025-05-06,scheduled,Soekarno-Hatta International,Hong Kong International
+2025-05-06,scheduled,Guangzhou Baiyun International,Stansted
+2025-05-06,scheduled,Guangzhou Baiyun International,Liszt Ferenc International
+2025-05-06,scheduled,Guangzhou Baiyun International,Auckland International
+2025-05-06,scheduled,Guangzhou Baiyun International,Auckland International
+2025-05-06,scheduled,Guangzhou Baiyun International,Bole International
+2025-05-06,scheduled,Guangzhou Baiyun International,Bole International
+2025-05-06,scheduled,Guangzhou Baiyun International,Bole International
+2025-05-06,scheduled,Guangzhou Baiyun International,Charles De Gaulle
+2025-05-06,scheduled,Guangzhou Baiyun International,Taiwan Taoyuan International (Chiang Kai Shek International)
+2025-05-06,scheduled,Guangzhou Baiyun International,Nanjing Lukou International Airport
+2025-05-06,scheduled,Guangzhou Baiyun International,Dubai
+2025-05-06,scheduled,Hong Kong International,Narita International Airport
+2025-05-06,scheduled,Hong Kong International,Narita International Airport
+2025-05-06,scheduled,Cam Ranh,Seoul (Incheon)
+2025-05-06,scheduled,Mackay,Brisbane International
+2025-05-06,scheduled,Mackay,Brisbane International
+2025-05-06,scheduled,Noibai International,Kansai International
+2025-05-06,scheduled,Noibai International,Kansai International
+2025-05-06,scheduled,Noibai International,Dubai
+2025-05-06,scheduled,Noibai International,Dubai
+2025-05-06,scheduled,Noibai International,Dubai
+2025-05-06,scheduled,Noibai International,Kansai International
+2025-05-06,scheduled,Noibai International,Kansai International
+2025-05-06,scheduled,Noibai International,Gimhae
+2025-05-06,scheduled,Noibai International,Seoul (Incheon)
+2025-05-06,scheduled,Noibai International,Singapore Changi
+2025-05-06,scheduled,Kansai International,Lishe International Airport
+2025-05-06,cancelled,Domodedovo,Osh International Airport
+2025-05-06,scheduled,Taiwan Taoyuan International (Chiang Kai Shek International),Hong Kong International
+2025-05-06,scheduled,Taiwan Taoyuan International (Chiang Kai Shek International),Guangzhou Baiyun International
+2025-05-06,scheduled,Tan Son Nhat International,Taiwan Taoyuan International (Chiang Kai Shek International)
+2025-05-06,scheduled,Tan Son Nhat International,Taiwan Taoyuan International (Chiang Kai Shek International)
+2025-05-06,scheduled,Tan Son Nhat International,Taiwan Taoyuan International (Chiang Kai Shek International)
+2025-05-06,scheduled,Tolmachevo,Talakan Airport
+2025-05-06,scheduled,Tolmachevo,
+2025-05-06,scheduled,Harbin,Vladivostok
+2025-05-06,scheduled,Harbin,Yakutsk
+2025-05-06,scheduled,Suvarnabhumi International,Indira Gandhi International
+2025-05-06,scheduled,Kuala Lumpur International Airport (klia),Zhengzhou
+2025-05-06,scheduled,Shanghai Pudong International,Ted Stevens Anchorage International Airport
+2025-05-06,scheduled,Hong Kong International,Jeju Airport
+2025-05-06,scheduled,Hong Kong International,Jeju Airport
+2025-05-06,scheduled,Hong Kong International,John F Kennedy International
+2025-05-06,scheduled,Hong Kong International,John F Kennedy International
+2025-05-06,scheduled,Hong Kong International,John F Kennedy International

@@ -1,15 +1,20 @@
-This is a flight data analysis project
+# ✈️ Flight Data Analysis Project
 
-Goals of this project:
+A project focused on collecting, processing, and analyzing flight data from an external API.
 
-•	Get flight data from external API.
+---
 
-•	Clean and transform the data.
+## 🎯 Project Goals
 
-•	Perform analysis and visualise flight data. 
+- 📥 Retrieve flight data from an external API  
+- 🛠️ Clean and transform raw data  
+- 📊 Perform analysis and visualize trends in flight data  
 
-Technologies used:
+---
 
-•	Pandas for data engineering.
+## 🛠️ Technologies Used
 
-•	Matplotlib and seaborn for visualisation.
+- **Pandas** – Data cleaning and transformation  
+- **Matplotlib** & **Seaborn** – Data visualization
+
+---

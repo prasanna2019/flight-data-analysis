@@ -28,18 +28,20 @@ def main()-> None :
         if dtype in ['int', 'float']:
             converted= pd.to_numeric(df[col], errors='coerce')
             failed= df[col].notna() & converted.isna()
-            if(failed.any()):
-                l.info('Errors in converting numeric data')
+           
         elif dtype in ['timestamp', 'datetime']:
             converted= pd.to_datetime(df[col], errors='coerce')
             failed= df[col].notna() & converted.isna()
-            if(failed.any()):
-                l.info('Errors in converting date data')
+
         else:
             converted= df[col].astype('string')
+        failed= df[col].notna() & converted.isna()
+
+        if(failed.any()):
+            l.info(f'Errors in converting {col} data')
         df[col]= converted
     
-l.warning('Done processing')
+    l.warning('Done processing')
 
     
 

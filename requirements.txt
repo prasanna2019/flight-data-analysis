@@ -1,6 +1,4 @@
 pandas
 matplotlib
-seaborn
 numpy
 python-dotenv
-pyspark

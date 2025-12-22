@@ -1,5 +1,6 @@
 from api_call import fetch_data
 import pandas as pd
+from utils import create_logger
 
 schema= {
    'flight_number': 'int',
@@ -13,20 +14,34 @@ schema= {
 
 required_columns=['flight_number', 'rocket.rocket_id' ]
 
-def main():
+l= create_logger()
+
+def main()-> None :
     content= fetch_data().json()
     df= pd.json_normalize(content)
-    difference= [s for s in schema.keys() if s not in df.columns]
-    if difference and set(required_columns) - set(difference):
-        print("loggng code for later")
-    else:
-        df= df[schema.keys()]
-        for col, dtype in schema.items():
-            if dtype in ['int', 'float']:
-                df[col]= pd.to_numeric(df[col], errors='coerce')
-            else:
-                df[col]= df[col].astype('string')
-        print(df)
+    difference= set(required_columns)- set(df.columns)
+    if difference:
+        l.error('Required columns not in the data')
+        return
+    df= df[schema.keys()]
+    for col, dtype in schema.items():
+        if dtype in ['int', 'float']:
+            converted= pd.to_numeric(df[col], errors='coerce')
+            failed= df[col].notna() & converted.isna()
+            if(failed.any()):
+                l.info('Errors in converting numeric data')
+        elif dtype in ['timestamp', 'datetime']:
+            converted= pd.to_datetime(df[col], errors='coerce')
+            failed= df[col].notna() & converted.isna()
+            if(failed.any()):
+                l.info('Errors in converting date data')
+        else:
+            converted= df[col].astype('string')
+        df[col]= converted
+    
+l.warning('Done processing')
+
+    
 
 
     

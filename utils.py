@@ -1,4 +1,16 @@
 import pandas as pd
+import logging
+
+def create_logger():
+    logging.basicConfig(
+        filename='logs.log',
+        format= '%(asctime)s | %(levelname)s | %(message)s',
+        filemode='a'
+    )
+
+    # Creating an object
+    logger = logging.getLogger()
+    return logger
 
 def prepare_data(df: pd.DataFrame) -> pd.DataFrame:
     df['flight_date']= pd.to_datetime(df['flight_date'], errors='coerce')

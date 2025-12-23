@@ -1,5 +1,41 @@
 import pandas as pd
 import logging
+from google.cloud import bigquery
+import os
+from google.oauth2 import service_account
+from google.api_core import retry, exceptions
+
+account= os.getenv('__service_account')
+
+custom_retry = retry.Retry(
+predicate=retry.if_exception_type(
+    exceptions.ServiceUnavailable,
+    exceptions.InternalServerError,
+    exceptions.DeadlineExceeded
+),
+initial=1.0,  # seconds
+multiplier=2.0,
+maximum=60.0  # max wait time
+)
+
+def bq_ingestion(df, project, destination):
+    credentials = service_account.Credentials.from_service_account_file(
+    account
+    )   
+    client = bigquery.Client(project= destination, credentials=credentials, default_retry=custom_retry)
+    job_config = bigquery.LoadJobConfig(
+    write_disposition="WRITE_APPEND"
+    )
+
+
+
+    job = client.load_table_from_dataframe(
+        df,
+        project+'.'+destination,
+        job_config=job_config
+    )
+    return job.result()
+
 
 def create_logger():
     logging.basicConfig(

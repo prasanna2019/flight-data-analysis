@@ -4,28 +4,28 @@ from utils import create_logger
 from utils import bq_ingestion
 from dotenv import load_dotenv
 import os
+from google.cloud import bigquery
+from google.oauth2 import service_account
 
-load_dotenv()
-project= os.getenv('__project')
-destination= os.getenv('__destination')
+
 
 schema= {
    'flight_number': 'int',
    'mission_name': 'string',
    'launch_year': 'int',
    'launch_date_utc': 'timestamp',
-   'rocket.rocket_id': 'string',
-   'rocket.rocket_type': 'string',
-   'rocket.rocket_name': 'string'
+   'rocket_rocket_id': 'string',
+   'rocket_rocket_type': 'string',
+   'rocket_rocket_name': 'string'
 }
 
-required_columns=['flight_number', 'rocket.rocket_id' ]
+required_columns=['flight_number', 'rocket_rocket_id' ]
 
 l= create_logger()
 
 def main()-> None :
     content= fetch_data().json()
-    df= pd.json_normalize(content)
+    df= pd.json_normalize(content, sep= '_')
     difference= set(required_columns)- set(df.columns)
     if difference:
         l.error('Required columns not in the data')
@@ -46,19 +46,15 @@ def main()-> None :
         if(failed.any()):
             l.info(f'Errors in converting {col} data')
         df[col]= converted
+        
     try:
-
-        test= bq_ingestion(df, project, destination)
+        err= bq_ingestion(df)
+        l.warning(err)
     except:
-        l.fatal(f'Could not ingest data in table')
-    
-    l.warning('Exiting...')
+        l.exception("Could not ingest data")
 
-    
+l.warning('Exiting...')
 
-
-    
-    
-
-main()
+if __name__== "__main__":
+    main()
 

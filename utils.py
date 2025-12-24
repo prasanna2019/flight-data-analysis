@@ -91,7 +91,7 @@ def transform(content: dict, schema: dict, required_columns: list, logger):
             logger.info(f'Errors in converting {col} data')
 
         df[col] = converted
-
+    df= df.drop_duplicates(subset=['flight_number'], keep= 'last')
     return df
 
 

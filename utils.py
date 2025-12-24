@@ -65,17 +65,32 @@ def clean_flight_data(df):
 
     return df
 
-def transform_flight_data(df):
-    df = df.copy()
-    
-    # Convert flight_date to datetime
-    df['flight_date'] = pd.to_datetime(df['flight_date'], errors='coerce')
 
-    # Extract new time-based features
-    df['year'] = df['flight_date'].dt.year
-    df['month'] = df['flight_date'].dt.month
-    df['day'] = df['flight_date'].dt.day
-    df['weekday'] = df['flight_date'].dt.day_name()
+def transform(content: dict, schema: dict, required_columns: list, logger):
+    df = pd.json_normalize(content, sep='_')
+
+    difference = set(required_columns) - set(df.columns)
+    if difference:
+        logger.error('Required columns not in the data')
+        return None
+
+    df = df[list(schema.keys())]
+
+    for col, dtype in schema.items():
+        if dtype in ['int', 'float']:
+            converted = pd.to_numeric(df[col], errors='coerce')
+
+        elif dtype in ['timestamp', 'datetime']:
+            converted = pd.to_datetime(df[col], errors='coerce')
+
+        else:
+            converted = df[col].astype('string')
+
+        failed = df[col].notna() & converted.isna()
+        if failed.any():
+            logger.info(f'Errors in converting {col} data')
+
+        df[col] = converted
 
     return df
 
